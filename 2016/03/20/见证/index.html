@@ -178,7 +178,7 @@
 <meta property="og:site_name" content="Juice Blog">
 <meta property="og:description" content="The first blog.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-23T04:43:57.196Z">
+<meta property="og:updated_time" content="2018-03-23T06:49:19.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="见证">
 <meta name="twitter:description" content="The first blog.">
@@ -446,6 +446,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/20/见证/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/03/20/见证/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -575,6 +585,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -866,6 +883,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'KimJuice',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'd2d5630d2c2d9647d6c1ee4b90d3fec0fff89f95',
+            
+                client_id: '2a87a8b2417f8200e867'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
