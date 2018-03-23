@@ -2011,7 +2011,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #127320;
+  background: #81d1f7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2290,11 +2290,23 @@ pre .javascript .function {
   cursor: pointer;
   font-size: 14px;
   border: 1px solid #0a9caf;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 #gitment-display-button:hover {
   color: #fff;
   background: #0a9caf;
+  border-radius: 5px;
+}
+#gitment-footer-container {
+  font-size: 0px;
+}
+a.gitment-editor-footer-tip {
+  font-size: 0px;
+}
+.gitment-comment,
+.gitment-editor-container {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.6) none repeat scroll !important;
 }
 .post-spread {
   margin-top: 20px;
