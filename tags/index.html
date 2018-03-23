@@ -178,7 +178,7 @@
 <meta property="og:site_name" content="Juice Blog">
 <meta property="og:description" content="求知若渴 虚心若愚">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-23T03:20:10.661Z">
+<meta property="og:updated_time" content="2018-03-23T08:19:39.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签详情">
 <meta name="twitter:description" content="求知若渴 虚心若愚">
@@ -431,7 +431,8 @@
   
     <div class="comments" id="comments">
       
-        <div id="gitment-container"></div>
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
       
     </div>
 
@@ -736,6 +737,11 @@
 <!-- END LOCAL -->
 
     
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
 
     
       <script type="text/javascript">
@@ -758,7 +764,11 @@
       }
 
       
-      renderGitment();
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
       
       </script>
     

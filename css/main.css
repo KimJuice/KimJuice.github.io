@@ -2011,7 +2011,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9555bb;
+  background: #a4ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3075,4 +3075,12 @@ body {
   background: rgba(255,255,255,0.6) none repeat scroll !important;
   padding-left: 3%;
   padding-right: 3%;
+}
+.use-motion .post-block,
+.use-motion .pagination,
+.use-motion .comments {
+  padding-top: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 1%;
 }
