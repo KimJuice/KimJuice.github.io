@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: rgba(0,0,0,0.4); /*进度条颜色*/
+        height: 2px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 5px     rgba(0,0,0,0.8); /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: rgba(0,0,0,0.4);    /*上边框颜色*/
+        border-left-color: rgba(0,0,0,0.4);    /*左边框颜色*/
+    }
+</style>
+
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.useso.com/css?family=PingFang SC Light Regular:300,300italic,400,400italic,700,700italic|PingFang SC Light Regular:300,300italic,400,400italic,700,700italic|PingFang SC Light Regular:300,300italic,400,400italic,700,700italic|PingFang SC Light Regular:300,300italic,400,400italic,700,700italic|Source Code Pro Light:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="人人都是产品经理读书笔记---需求">
+<meta name="keywords" content="需求,用户">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于需求">
+<meta property="og:url" content="https://KimJuice.github.io/2016/03/25/关于需求/index.html">
+<meta property="og:site_name" content="Juice Blog">
+<meta property="og:description" content="人人都是产品经理读书笔记---需求">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://kimjuice.github.io/figureBed/icon1.jpg">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/qtYwRjQpXkMQN1f0nilsVY3Z-UnrpnQqwxzOtlIyQMVqY_LROe62BnRsFDcnA_ffuomWpwgqEBN8Ia4t9pMjHDTE0QiEc9gYpFGCi2Ai9fGMWAHWRe29fkINvq75mKxAooz9LIZ9Br38JyDgcPN2yoahddLiVx5k_uiD7NeGzKdv9INvkRYrlDZG_6p-qfVJrptjtQw7QWMoKwqKdlQl1ndViFpPrkuNwwTY6e-g_DdK3SzwrptjQ7isRu8U0000">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/YtxMF-5vqvwNSngURMoALT0joapFAD7JirE0Y3oRi-R5bXKALWfFr-z-rhaFmkL2aKDeYNxQqVPY-MAOMLOAptUtFUsPzdJTlETz6m00">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/oyjFILLuEQVXsSQc5tlNFEsPnfK74dc-SDtJTREUpj_rRCwQfnldFMjO3X5_sj7sRDw4frFRdkoOzMJtzgSDUs3YSr-iRtcwRjxplWqlP-rxkciPHFp5keNFrqq7QWSgVhP-2XUoJGgwHPdf6IMwkdROhCCKGbAFnHcOGYZgCPo7AOIa7itP0000">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKZEpot8pqlDAr6evb800gV4vEpqelpIl1Jd_9py8eNWx4gddD9KY5n-KKfg4KJS9pCzeoGu9x4arRqeiPAhbYlw-PvfJ_ktnt95F-kVy6JNaYUxTca4k6Z2-S-cRtivVGk8ksBXqxdJWOod4tgVBzy0Lj3_OZ-4CU5f-wuN3QrmDboNKscw0io6OhZhIujJanEBKobpEqZQiQWelno7pn3M5QKcboJcfUV0BSGN80Z5Ii-NzpxVk5i9gWj9ukd6fcTh5cfuE_hvAu32PLwt9amL24G_NJJlQSCUZQUjMvukxNuvf-7PnYRDM0KRFJs5w6UTAvzkdAhnRCxyPtDcmwGGEh5AGtG-dR_h-S86YDfQ1GKCDtMq8JaMOjYq3I2NTCr_qRmNoGw8mBCfEr_iduqa_6Jlv9UhUa3nrzkE90oAmIVxrprTqejiH5lho-OL4FSX2UlfwI7SLmi0">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKZEpot8pqlDAr6evb800gV4vEpqelpIl1Jd_9py8eNWx4gddD9KY5n-KKfg4KJS9pCzeoGu9x4arRqeiPAhbgiORcHUVaag3jF0kjppSr9IyuBoKo9JStBoop6C1icZ65YKcboIc9UU0pSLdpiGYfMUThGzcpVXMK_ximNjIb2zqI_RUryiQtpMi3mMmd--PVcpXgLFTos3yf_rD3xVlVRPz6qlfs-12ZsTslPanwmdkxS_RTZphB__nVuD6i_cD40CqeIe0Vkv2EGMXVmqGZgi521YJtkdFM_QgQFmVCgAPntR8Qfr59wshddQlmFEwr__h6llYuqBd-pOzRHr-vEzao7-UR9tFr2RnilLCvxiMFjaRv--eP6nYQcUdfucLoq0">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXCBiaiooofLAZcKW02fyJaxFIY_DAy5EVydFmYXV2Cp99KY4n-KKfg4KJK9pCzeoGu9x4arRqeiH8ixLXKb5-ELRQMI-dbd8Pd6vkUTKv-sjEgfA2Rab-UfskdeFHYt-IdxRiKd89SbBYGEGWLJtOjVpgvyScUMI_MhLFYqWKAPQO1zQrRyMBTBYM5aepKFB1WzCk6MI_sjySgA3rVtVrouKubhjISubG5BjqYa5F0Afxiw8KhUZPbtzCzpKe0">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/TOv1Im915CVl-odc0mXxzsY1bmwHfn0FYpkPkEx8k18ImMhOLY9fcK8gosQH46Qch1khz6LsPjnlqQnRNQJX7URz_-_z_g-Oowe52Kjva4Rv0bAXge5J0V0NazAv34ObLTv12i8WaIl7b18CFOHbY4DzBvivrXAAfC4ubih2cL3yGwf8W__GDbjnfCXGFK3o8LGKTBA53dmEJAxdvde-1FkxAI59bZgvQP75CnlLYNF95T_wPBqtqcomb_TWWBlEEUtQVdVEMtPjKxsI4ZQtu20Le2FmAqS1QvkajIAj4UsR4K0Vgcnv9zBwBNC7ej_NwRJgEMCnJDty5XzX0azwCkXij8N-aQE0r6pFxNYkwwtklI-BLYOHi7vy3U3D2zQUYhxH8Cq97LYUQukivv3QZ7OCQWtP-8hNDm00">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXCBiaiooofLAZcKW02fyJaxFIY_DAy5EVydFmYXV2Cp99KY4n-KKfg4KJK9pCzeoGu9x4arRqeiH8ixLXKb5-ELRQMI-dbd8Pd6vjUjhU_dDscfA2Rab-UfskdeFHqN-kBTIjUhDkbn0KNWoY523_PCqk92qD4GRS8P84kIFMpxadFTy_5gYWdDGsgPbRJypsJWMgW30KzFJk5w6Ux5xxOjlbbU-_J2UkVpLtuPFUsM1G7OJ4HuRmdEzR2LO3Oo7BFEYS_xMc5IqEvO1NHp-QiWl0XSh58ZiDKhVHar_Adank1ThzOjmwe0eKBD-zbmwmN-zinpSDKhVHqJyFJ_ebWjqFuspS1-KztD2i10000">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/VP7DJi9064NtFCKNda30dsIMk63ZIbR6kAXqH4AP8MM88OQaQa848s24QFo9ccXYOanaerWWl4odbBUmjBMbsj9LE-VqVdTcIlaSAGgoK80CBHGfmOJ1OGJC9obaybcPbecuJYKgGpfVIKfbR3CgYrYsrpTosNsMbWI6Kx9GYLGZ9JUIK8P3qgo_KbGICTcauXQM97hmBth6VO4opZ21P2KtTL4FJuxoqIMldq_l5Brth2i3lVi1iQMe6JBlT6jQ_qORV75b67NojwTlrplMcxMLNSeOBG3Tim62PTlI-k_1rWmWM76iKJF4CW62cB_ofF6fAqTU4Qjxw20FkwNuKE6jYz0_F8nWzSzfdTOclO4xsXYtZVQBFI4uosSWI3W56W_6oKZlV1lZsv0EymQ2DNyD_VM9tr-vDUpFM73IBqGGdxVZY-ouTpNsGcAHdR0svY_OQclgiwQgRaS-VDJwzR03jvXxFvFccQPsWbs7cJSpes2EhVu0">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/svg/VL7BJi905Dtp5PFPymiceeaRLxfmtK25XjgQeKA8QLAC5eX4IS172eAu48rO936YY7mDqsd_mkaB2bHdEUTvxysaEU6GGSm1OE8Ib-MaF3YE0FfYJ3oTHEAHaDWGUH61lHGdiIuYeWIBtDzjBfcITdb6OhSGatVWTOJ4N2WgHpApDCJ69KP8ygmVzxUf79cJeTLKZC49qJkaga9F2qdzoIWD8OZoxBuKNGCGDnwispPSGXDYJh1HryCg5gs6wd4ymN-SbH8Uk5Y2tDV9ymSrGlOGjfFPVmVP3C053OOIPvrrpL2w3bNNhEAbovR3it59DLfLFzknTG7pfuShrzIMEfAEJgrmUsGqUtZGekvmJWy17H4ktPdzKwotoCMRfKtmw34W2W4zaLq7NwdJJstwFSJAU46q0ZeYanvHlw71zDFeruFpBcquEh-8DtZuLiXhmrBA8LinoZLSELkuogI6YoCGszaCD0ry1gZJKHVN2jEnPkfwI4d_586INeyWow_ciCZBkTNvWX7v5m00">
+<meta property="og:updated_time" content="2018-03-28T09:43:09.895Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于需求">
+<meta name="twitter:description" content="人人都是产品经理读书笔记---需求">
+<meta name="twitter:image" content="https://kimjuice.github.io/figureBed/icon1.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://KimJuice.github.io/2016/03/25/关于需求/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>关于需求 | Juice Blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Juice Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Product Manager Series Articles</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://KimJuice.github.io/2016/03/25/关于需求/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Juice">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Juice Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">关于需求</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-25T18:56:18+08:00">2016-03-25</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/人人都是产品经理/" itemprop="url" rel="index"><span itemprop="name">人人都是产品经理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/25/关于需求/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/03/25/关于需求/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">人人都是产品经理读书笔记---需求</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><p>可能会好奇, 不是说需求吗? 怎么开篇就来了个用户. 没错, 就是用户, 没有用户就没有需求, 用户是需求之源.</p>
+<h2 id="需求本质"><a href="#需求本质" class="headerlink" title="需求本质"></a>需求本质</h2><p>马斯洛需求层次理论: 生理需求、安全需求、社交需求、尊重需求、自我实现需求.<br>简单说, 需求 == 满足人类的某种欲望. 淘宝满足足不出户购物的欲望, 支付宝/微信钱包/各种线上支付渠道满足不用携带现金消费的欲望, 移动/电信等运营商满足随时随地通信的欲望… 那么需求一定来自用户吗? 不尽然, 有些需求是人们自主意识产生的, 比如: 我想要个房子, 它使我生活安定, 有安全感. 再不济, 我需要一个住处, 租个房子. 这都属于刚需, 为了生存必须满足的需求. 没有栖身之所可能会生病, 严重情况会失去生命. 另一些需求则源于创造, 典型案例, 乔布斯创造了苹果. 在此之前, 人类不会有”我想要一部苹果手机的愿望”.  他创造性的满足了人类对科技的体验, 全新的交互方式(触屏), 流畅的视觉享受, 包括各种闻所未闻的功能. 现在可能不觉得什么, 但在它刚刚问世时, 人们就是这种感受. 所以说, 理解需求的来源, 才能更好的满足用户的需求.</p>
+<h2 id="是否应该满足所有用户的需求"><a href="#是否应该满足所有用户的需求" class="headerlink" title="是否应该满足所有用户的需求?"></a>是否应该满足所有用户的需求?</h2><p>这里首先需要明确一个概念, 我们的用户分为几种? 当前互联网环境的用户基本可以划分为: 免费用户(User), 付费用户(客户 Customer). 这两种用户的需求很可能是不同的, 满足所有用户的需求会使产品变得臃肿, 没有特点, 失去方向, 那么以谁为中心成了最关键的问题. 这要看当前的企业目标是什么?<br>(1)初创型企业, 处于打开市场阶段, 让更多人知道和使用该产品则成了首要任务. 流量即价值, 此时的付费用户相对较少, 那么免费用户占有绝对优势, 这就意味着可以从付费用户中获取的价值明显低于免费用户.<br>(2)成熟型企业, 市场占有率已大面积铺开, 很多人已经熟悉和使用该产品, 甚至50%或更多用户已开始购买各种付费服务. 显而易见, 从付费用户那里, 可以提取更多价值, 获得长远收益, 他们的需求便成为当下的重点.</p>
+<h2 id="想用户之所想"><a href="#想用户之所想" class="headerlink" title="想用户之所想"></a>想用户之所想</h2><p>客户到底在想什么, 和我们认为的一样吗? 很多时候, 做产品的人未必理解用产品的人. 用户的行为轨迹和思考模式各有差异, 如何看到这些差异并理解其产生的原由? 显然靠冥思苦想是无济于事的, 应了毛主席那句话, 从群众中来到群众中去. 下面进入另一个环节, 探讨如何走进用户的心, 起码靠的更近些.</p>
+<h1 id="研究用户"><a href="#研究用户" class="headerlink" title="研究用户"></a>研究用户</h1><p>想要真正了解用户, 并不是件简单的事, 需要通过某些方法来帮助我们得出更正确的结论.</p>
+<h2 id="人物角色-Web-persona"><a href="#人物角色-Web-persona" class="headerlink" title="人物角色(Web-persona)"></a>人物角色(Web-persona)</h2><p>什么是人物角色? 简单说就是一组目标群体真实特征的画像. 仅代表用户的综合原型, 并不是真正的用户. 既然用画像/原型这样的词语来形容人物角色, 说明它可以非常贴近真实的用户状态, 至于画的准不准, 则与创建过程的准确性和完整性息息相关.</p>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>使用人物角色需要一个很重要的前提: UCD(User Centered Design)即以用户为中心的设计. 在产品的各个阶段, 各个方面都以用户的需求, 体验和满意度为出发点. 如果价值观本身并不认同这样的设计模式, 创建人物角色不过是雕冰画脂.</p>
+<h3 id="要素"><a href="#要素" class="headerlink" title="要素"></a>要素</h3><p>明确人物角色的组成部分:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">角色优先级</td>
+<td style="text-align:left">首要/次要/不重要/排斥的</td>
+</tr>
+<tr>
+<td style="text-align:left">统计学信息</td>
+<td style="text-align:left">姓名/性别/年龄/性格/爱好/地域/职业/收入消费水平/学历/照片(最好能和角色的常态联系起来(真人照片), 有代表性即可, 但不要使用真实的用户照片)</td>
+</tr>
+<tr>
+<td style="text-align:left">产品相关信息</td>
+<td style="text-align:left">消费途径/种类倾向/偏好/采购周期</td>
+</tr>
+<tr>
+<td style="text-align:left">用户目标</td>
+<td style="text-align:left">需求/态度/期望/评价</td>
+</tr>
+<tr>
+<td style="text-align:left">商业目标</td>
+<td style="text-align:left">提高知名度/增加销量/扩大经营规模/转换目标群体</td>
+</tr>
+</tbody>
+</table>
+<h3 id="人物角色用例-化妆品网络商城"><a href="#人物角色用例-化妆品网络商城" class="headerlink" title="人物角色用例(化妆品网络商城)"></a>人物角色用例(化妆品网络商城)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><center><img src="/figureBed/icon1.jpg" alt=""></center></th>
+<th style="text-align:left"><table><tr><th>用户基本信息</th></tr><tr><td>晓月 女 20岁 大二在读<br>目前居住地: 北京<br>性格: 乐观开朗<br>爱好: 美妆, 服饰搭配, 阅读<br>收入: 无, 生活费1500/月</td></tr></table></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><b>角色优先级</b></td>
+<td style="text-align:left">次要</td>
+</tr>
+<tr>
+<td style="text-align:left"><b>产品相关信息</b></td>
+<td style="text-align:left">消费途径: 网购60%, 互联网经验6年, 用于学习, 购物, 游戏<br> 种类倾向: 滋润保湿类<br>偏好: 价格实惠, 包装新颖<br> 采购周期: 3~6月<br>相关知识: 掌握一般护肤技能, 没有彩妆经验.</td>
+</tr>
+<tr>
+<td style="text-align:left"><b>用户目标</b></td>
+<td style="text-align:left">交流护肤美容经验, 学习化妆知识, 提升个人形象气质</td>
+</tr>
+<tr>
+<td style="text-align:left"><b>商业目标</b></td>
+<td style="text-align:left">增加销量, 提高用户忠诚度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="分类维度"><a href="#分类维度" class="headerlink" title="分类维度"></a>分类维度</h3><p>完整的人物角色创建是由一组角色构成的, 我们的目标群体大多数时候不仅仅只包含一类人. 分类的维度有很多, 比如: 性别, 年龄, 身高… 通常围绕角色的目标, 行为和观点展开. 还以化妆品为例. 从性别维度划分: 男, 女, both. 年龄维度: 0~3婴幼儿, 3~10儿童, 10~20青少年, 20~30青年, 30~50中年, 50以上老年… 角色目标(即需求)维度: 滋润保湿, 抗皱驻颜, 祛斑美白… (此处只是举例, 划分未必准确, 望见谅).</p>
+<h3 id="角色创建"><a href="#角色创建" class="headerlink" title="角色创建"></a>角色创建</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">研究步骤</th>
+<th style="text-align:left">优点</th>
+<th style="text-align:left">缺点</th>
+<th style="text-align:left">适用性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">定性</td>
+<td style="text-align:left">1. 定性研究: 访谈, 现场观察, 可用性测试;<br>2. 细分用户群: 根据用户的目标, 观点和行为找出模式;<br>3. 为每种细分群体创建一个角色;</td>
+<td style="text-align:left">1. 成本低: 操作15个用户左右;<br>2. 简单, 易理解, 易接受;<br>3. 仅需少量专业人士, 可自行简单的交叉分析;</td>
+<td style="text-align:left">1. 无量化指标, 只能适用于所有用户模式;<br>2. 已有假设不会被质疑;</td>
+<td style="text-align:left">1. 研究条件和成本受限;<br>2. 管理层认同, 无需量化指标;<br>3. 使用角色风险较小;<br>4. 小项目实验;</td>
+</tr>
+<tr>
+<td style="text-align:left">经定量验证的定性</td>
+<td style="text-align:left">1和2 同上;<br>3. 通过定量研究验证细分用户模型;<br>4. 为每种细分群体创建一个角色;</td>
+<td style="text-align:left">1. 量化数据可保证角色的准确性;<br>2和3 同上;<br></td>
+<td style="text-align:left">1. 工作量较大;<br>2. 同上;<br>3. 如果定量数据不支持假设, 需要重做;</td>
+<td style="text-align:left">1. 时间和金钱成本较高;<br>2. 管理层需要量化数据作为结论支撑;<br>3. 可以肯定细分模型的准确性;</td>
+</tr>
+<tr>
+<td style="text-align:left">定量</td>
+<td style="text-align:left">1. 定性研究;<br>2. 制订细分假说列表: 包括定量分析和多个候选细分选项;<br>3. 收集细分选项数据;<br>4. 细分用户(统计聚类分析): 生成量化可描述的异同点细分模型;<br>5. 为每种细分群体创建一个角色;</td>
+<td style="text-align:left">1. 定量与定性相结合, 模型可第一时间得到验证;<br>2. 迭代的方式能发现最优方案;<br>3. 聚类分析可以兼容更多变量;</td>
+<td style="text-align:left">1. 工作量大(7~10周);<br>2. 需更多专业人士;<br>3. 结论可能与假设和商业方向相悖;</td>
+<td style="text-align:left">1. 可以投入时间和金钱;<br>2. 同上;<br>3. 希望研究多个细分模型, 从中找到最合适的;<br>4. 最终角色由多个变量确定, 不确定哪个是最重要的;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四象限"><a href="#四象限" class="headerlink" title="四象限"></a>四象限</h2><img src="http://www.plantuml.com/plantuml/svg/qtYwRjQpXkMQN1f0nilsVY3Z-UnrpnQqwxzOtlIyQMVqY_LROe62BnRsFDcnA_ffuomWpwgqEBN8Ia4t9pMjHDTE0QiEc9gYpFGCi2Ai9fGMWAHWRe29fkINvq75mKxAooz9LIZ9Br38JyDgcPN2yoahddLiVx5k_uiD7NeGzKdv9INvkRYrlDZG_6p-qfVJrptjtQw7QWMoKwqKdlQl1ndViFpPrkuNwwTY6e-g_DdK3SzwrptjQ7isRu8U0000">
+<h3 id="用户访谈"><a href="#用户访谈" class="headerlink" title="用户访谈"></a>用户访谈</h3><ul>
+<li><b>表里不一</b>: 用户说的和做的很可能背道而驰, 这并不意味意欺骗或隐瞒, 根源可能是他们没有思考过这个问题而已.</li>
+<li><b>以偏概全</b>: 当样本量过低时, 往往会出现结论偏差.</li>
+<li><b>用户主导</b>: 如果谈话始终是用户持有主动权, 就无法获取真正需要了解的信息, 此时需要访谈者拿回主动权, 让用户说重点.</li>
+<li><b>访谈者主导</b>: 当用户表达某些观点和建议时, 访谈者据理力争说服用户, 这会埋没本该发现的问题, 访谈就只是互相听取想法的过程, 不要掺杂过多个人观点.</li>
+</ul>
+<h3 id="调查问卷"><a href="#调查问卷" class="headerlink" title="调查问卷"></a>调查问卷</h3><ul>
+<li><b>样本偏差</b>: 采集方式不同, 所获样本类型也会不同, 尽量选择靠近目标用户群的方式获取样本.</li>
+<li><b>样本过少</b>: 导致分析的结论没有稳定性和参考价值.</li>
+<li><b>问卷设计</b>: 内容应避免引导性; 问题的顺序也会影响作答, 可以采取多种顺序进行采集.</li>
+</ul>
+<h3 id="可用性测试"><a href="#可用性测试" class="headerlink" title="可用性测试"></a>可用性测试</h3><ul>
+<li><b>测试不及时</b>: 临上线才想起做的话, 恐怕发现问题也无济于事, 只能等着版本迭代. 所以要趁早, 产品各个阶段都可以做, 不断发现问题, 不断修正.</li>
+<li><b>不做</b>: 无法量化的东西, 总是不太受老板青睐, 尽管简单做一做, 也容易发现不少问题, 尽量做吧.</li>
+<li><b>明确测试目的</b>: 我们测试的是产品设计是否合理, 并非考验用户的使用能力, 所以对参试者说明意图尤为重要.</li>
+<li><b>组织者行为</b>: 测试的目的在于了解用户独立思考使用产品的过程, 组织者不该以任何形式暗示或提示用户完成任务. 测试完毕后, 赠与小礼品表示感谢, 积累友好关系.</li>
+</ul>
+<h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点:"></a>注意点:</h4><ul>
+<li><b>酌情处理</b>: 真正工作中, 不见得每个环境都有足够的数据可分析, 商业敏感度也很重要.</li>
+<li><b>误读数据</b>: 有些极端数据, 极高或过低, 都会影响整体结果, 这就像比赛通常会去掉一个最高分和最低分的道理是一样的, 所以小心这些数据.</li>
+<li><b>临阵磨枪</b>: 平时不在意数据, 到了需要分析时, 发现巧妇难为无米之炊, 获取数据最好在做需求时就一并加上.</li>
+</ul>
+<h4 id="商业价值"><a href="#商业价值" class="headerlink" title="商业价值"></a>商业价值</h4><p>数据分析如何转化为商业价值? 通过数据分析, 可以得到很多未曾发现的现象, 很可能与之前方向性的假设有所偏差, 分析这些现象和偏差, 尝试作出合理解释, 再通过调研证实, 得出正确结论, 实现指导产品发展方向的目的.</p>
+<h3 id="需求采集"><a href="#需求采集" class="headerlink" title="需求采集"></a>需求采集</h3><p>每个与产品相关的人, 都有采集需求的义务. 采集方法很多, 单项需求卡片, 现场调查, AB 测试, 日及研究, 卡片分类法, 自己提等等, 酌情开展, 因地制宜.</p>
+<h1 id="分析需求"><a href="#分析需求" class="headerlink" title="分析需求"></a>分析需求</h1><h2 id="用户需求-VS-产品需求"><a href="#用户需求-VS-产品需求" class="headerlink" title="用户需求 VS 产品需求"></a>用户需求 VS 产品需求</h2><p>用户在阐述需求时, 通常是在说他认为可行的一种方案而已, 这个方案背后, 必然掩藏着真正的需求. 产品就是通过表象看本质, 找到真实需求, 提出合适的解决方案. 需求分析是从细节到本质, 再从本质到细节的双向过程.<br><img src="http://www.plantuml.com/plantuml/svg/YtxMF-5vqvwNSngURMoALT0joapFAD7JirE0Y3oRi-R5bXKALWfFr-z-rhaFmkL2aKDeYNxQqVPY-MAOMLOAptUtFUsPzdJTlETz6m00"></p>
+<h2 id="满足需求的方式"><a href="#满足需求的方式" class="headerlink" title="满足需求的方式"></a>满足需求的方式</h2><ul>
+<li><b>改变现状</b>: 直接开发某个产品或功能.</li>
+<li><b>降低理想</b>: 通过比较等方式, 降低需求欲望.</li>
+<li><b> 转移需求</b>: 采取各种方式转移对需求的注意力.</li>
+</ul>
+<h2 id="创造需求"><a href="#创造需求" class="headerlink" title="创造需求"></a>创造需求</h2><p>这是开篇就提到的概念, 也是产品设计的最高境界. 创造需求是需要天赋的, 更和长时间积累出的商业敏感度息息相关. 再创造性, 需求也是源于用户, 所以脚踏实地做好用户需求是第一步.</p>
+<h2 id="需求-DNA"><a href="#需求-DNA" class="headerlink" title="需求 DNA"></a>需求 DNA</h2><img src="http://www.plantuml.com/plantuml/svg/oyjFILLuEQVXsSQc5tlNFEsPnfK74dc-SDtJTREUpj_rRCwQfnldFMjO3X5_sj7sRDw4frFRdkoOzMJtzgSDUs3YSr-iRtcwRjxplWqlP-rxkciPHFp5keNFrqq7QWSgVhP-2XUoJGgwHPdf6IMwkdROhCCKGbAFnHcOGYZgCPo7AOIa7itP0000">
+<h3 id="转化需求"><a href="#转化需求" class="headerlink" title="转化需求"></a>转化需求</h3><p>将用户需求转化为产品需求, 使用工具(表格/脑图等)将用户需求记录下来, 可以通过头脑风暴的方式进行探讨/分析, 最后筛选提炼出有价值可实现的需求.</p>
+<h3 id="确定基本属性"><a href="#确定基本属性" class="headerlink" title="确定基本属性"></a>确定基本属性</h3><img src="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKZEpot8pqlDAr6evb800gV4vEpqelpIl1Jd_9py8eNWx4gddD9KY5n-KKfg4KJS9pCzeoGu9x4arRqeiPAhbYlw-PvfJ_ktnt95F-kVy6JNaYUxTca4k6Z2-S-cRtivVGk8ksBXqxdJWOod4tgVBzy0Lj3_OZ-4CU5f-wuN3QrmDboNKscw0io6OhZhIujJanEBKobpEqZQiQWelno7pn3M5QKcboJcfUV0BSGN80Z5Ii-NzpxVk5i9gWj9ukd6fcTh5cfuE_hvAu32PLwt9amL24G_NJJlQSCUZQUjMvukxNuvf-7PnYRDM0KRFJs5w6UTAvzkdAhnRCxyPtDcmwGGEh5AGtG-dR_h-S86YDfQ1GKCDtMq8JaMOjYq3I2NTCr_qRmNoGw8mBCfEr_iduqa_6Jlv9UhUa3nrzkE90oAmIVxrprTqejiH5lho-OL4FSX2UlfwI7SLmi0">
+<h3 id="分析商业价值"><a href="#分析商业价值" class="headerlink" title="*分析商业价值"></a>*分析商业价值</h3><img src="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKZEpot8pqlDAr6evb800gV4vEpqelpIl1Jd_9py8eNWx4gddD9KY5n-KKfg4KJS9pCzeoGu9x4arRqeiPAhbgiORcHUVaag3jF0kjppSr9IyuBoKo9JStBoop6C1icZ65YKcboIc9UU0pSLdpiGYfMUThGzcpVXMK_ximNjIb2zqI_RUryiQtpMi3mMmd--PVcpXgLFTos3yf_rD3xVlVRPz6qlfs-12ZsTslPanwmdkxS_RTZphB__nVuD6i_cD40CqeIe0Vkv2EGMXVmqGZgi521YJtkdFM_QgQFmVCgAPntR8Qfr59wshddQlmFEwr__h6llYuqBd-pOzRHr-vEzao7-UR9tFr2RnilLCvxiMFjaRv--eP6nYQcUdfucLoq0">
+<h3 id="初评实现难度"><a href="#初评实现难度" class="headerlink" title="初评实现难度"></a>初评实现难度</h3><p>量化需求实在太难, 初评允许误差, 由经验丰富的技术经理/系统分析师/架构师进行评估, 通过不断实践反复修正.</p>
+<h3 id="计算性价比"><a href="#计算性价比" class="headerlink" title="计算性价比"></a>计算性价比</h3><p><b> 性价比 = 商业价值 ÷ 实现难度(开发量)</b><br>优先处理性价比高的需求.</p>
+<h2 id="筛选需求"><a href="#筛选需求" class="headerlink" title="筛选需求"></a>筛选需求</h2><img src="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXCBiaiooofLAZcKW02fyJaxFIY_DAy5EVydFmYXV2Cp99KY4n-KKfg4KJK9pCzeoGu9x4arRqeiH8ixLXKb5-ELRQMI-dbd8Pd6vkUTKv-sjEgfA2Rab-UfskdeFHYt-IdxRiKd89SbBYGEGWLJtOjVpgvyScUMI_MhLFYqWKAPQO1zQrRyMBTBYM5aepKFB1WzCk6MI_sjySgA3rVtVrouKubhjISubG5BjqYa5F0Afxiw8KhUZPbtzCzpKe0">
+<h3 id="需求打包"><a href="#需求打包" class="headerlink" title="需求打包"></a>需求打包</h3><ul>
+<li><b>集中类似功能点</b>: 打包后, 输出业务逻辑图.</li>
+<li><b>依赖</b>: 应在需求表中注明功能与人力资源间的依赖, 类似功能间的依赖…</li>
+<li><b>需求粒度</b>: 在管理成本允许的范围内尽量细化需求粒度.</li>
+</ul>
+<h3 id="商业需求文档-BRD"><a href="#商业需求文档-BRD" class="headerlink" title="商业需求文档(BRD)"></a>商业需求文档(BRD)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">元素</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">名称</td>
+<td style="text-align:left">未来的项目名称</td>
+</tr>
+<tr>
+<td style="text-align:left">项目背景</td>
+<td style="text-align:left">为什么做? 解决什么问题? 项目必要性</td>
+</tr>
+<tr>
+<td style="text-align:left">*商业价值</td>
+<td style="text-align:left">阐述核心价值, 预测相关数据, 提出商业目标</td>
+</tr>
+<tr>
+<td style="text-align:left">功能需求描述</td>
+<td style="text-align:left">描述需求, 展示功能列表和业务逻辑图</td>
+</tr>
+<tr>
+<td style="text-align:left">非功能需求描述</td>
+<td style="text-align:left">重要的非功能需求描述(如果有)</td>
+</tr>
+<tr>
+<td style="text-align:left">*资源评估</td>
+<td style="text-align:left">成本</td>
+</tr>
+<tr>
+<td style="text-align:left">风险和对策</td>
+<td style="text-align:left">阐述潜在风险和抵御对策</td>
+</tr>
+</tbody>
+</table>
+<h3 id="管理需求"><a href="#管理需求" class="headerlink" title="管理需求"></a>管理需求</h3><img src="http://www.plantuml.com/plantuml/svg/TOv1Im915CVl-odc0mXxzsY1bmwHfn0FYpkPkEx8k18ImMhOLY9fcK8gosQH46Qch1khz6LsPjnlqQnRNQJX7URz_-_z_g-Oowe52Kjva4Rv0bAXge5J0V0NazAv34ObLTv12i8WaIl7b18CFOHbY4DzBvivrXAAfC4ubih2cL3yGwf8W__GDbjnfCXGFK3o8LGKTBA53dmEJAxdvde-1FkxAI59bZgvQP75CnlLYNF95T_wPBqtqcomb_TWWBlEEUtQVdVEMtPjKxsI4ZQtu20Le2FmAqS1QvkajIAj4UsR4K0Vgcnv9zBwBNC7ej_NwRJgEMCnJDty5XzX0azwCkXij8N-aQE0r6pFxNYkwwtklI-BLYOHi7vy3U3D2zQUYhxH8Cq97LYUQukivv3QZ7OCQWtP-8hNDm00">
+<img src="http://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXCBiaiooofLAZcKW02fyJaxFIY_DAy5EVydFmYXV2Cp99KY4n-KKfg4KJK9pCzeoGu9x4arRqeiH8ixLXKb5-ELRQMI-dbd8Pd6vjUjhU_dDscfA2Rab-UfskdeFHqN-kBTIjUhDkbn0KNWoY523_PCqk92qD4GRS8P84kIFMpxadFTy_5gYWdDGsgPbRJypsJWMgW30KzFJk5w6Ux5xxOjlbbU-_J2UkVpLtuPFUsM1G7OJ4HuRmdEzR2LO3Oo7BFEYS_xMc5IqEvO1NHp-QiWl0XSh58ZiDKhVHar_Adank1ThzOjmwe0eKBD-zbmwmN-zinpSDKhVHqJyFJ_ebWjqFuspS1-KztD2i10000">
+<h4 id="附加值"><a href="#附加值" class="headerlink" title="附加值"></a>附加值</h4><p>通过需求管理可以看出需求量的变化, 模块分布情况, 了解产品处在哪个阶段, 发展空间等等…<br><img src="http://www.plantuml.com/plantuml/svg/VP7DJi9064NtFCKNda30dsIMk63ZIbR6kAXqH4AP8MM88OQaQa848s24QFo9ccXYOanaerWWl4odbBUmjBMbsj9LE-VqVdTcIlaSAGgoK80CBHGfmOJ1OGJC9obaybcPbecuJYKgGpfVIKfbR3CgYrYsrpTosNsMbWI6Kx9GYLGZ9JUIK8P3qgo_KbGICTcauXQM97hmBth6VO4opZ21P2KtTL4FJuxoqIMldq_l5Brth2i3lVi1iQMe6JBlT6jQ_qORV75b67NojwTlrplMcxMLNSeOBG3Tim62PTlI-k_1rWmWM76iKJF4CW62cB_ofF6fAqTU4Qjxw20FkwNuKE6jYz0_F8nWzSzfdTOclO4xsXYtZVQBFI4uosSWI3W56W_6oKZlV1lZsv0EymQ2DNyD_VM9tr-vDUpFM73IBqGGdxVZY-ouTpNsGcAHdR0svY_OQclgiwQgRaS-VDJwzR03jvXxFvFccQPsWbs7cJSpes2EhVu0"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><img src="http://www.plantuml.com/plantuml/svg/VL7BJi905Dtp5PFPymiceeaRLxfmtK25XjgQeKA8QLAC5eX4IS172eAu48rO936YY7mDqsd_mkaB2bHdEUTvxysaEU6GGSm1OE8Ib-MaF3YE0FfYJ3oTHEAHaDWGUH61lHGdiIuYeWIBtDzjBfcITdb6OhSGatVWTOJ4N2WgHpApDCJ69KP8ygmVzxUf79cJeTLKZC49qJkaga9F2qdzoIWD8OZoxBuKNGCGDnwispPSGXDYJh1HryCg5gs6wd4ymN-SbH8Uk5Y2tDV9ymSrGlOGjfFPVmVP3C053OOIPvrrpL2w3bNNhEAbovR3it59DLfLFzknTG7pfuShrzIMEfAEJgrmUsGqUtZGekvmJWy17H4ktPdzKwotoCMRfKtmw34W2W4zaLq7NwdJJstwFSJAU46q0ZeYanvHlw71zDFeruFpBcquEh-8DtZuLiXhmrBA8LinoZLSELkuogI6YoCGszaCD0ry1gZJKHVN2jEnPkfwI4d_586INeyWow_ciCZBkTNvWX7v5m00">
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢支持!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.JPG" alt="Juice 微信支付"/>
+        <p>微信打赏</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.JPG" alt="Juice 支付宝"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Juice</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://KimJuice.github.io/2016/03/25/关于需求/" title="关于需求">https://KimJuice.github.io/2016/03/25/关于需求/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/需求/" rel="tag"># 需求</a>
+          
+            <a href="/tags/用户/" rel="tag"># 用户</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/20/见证/" rel="next" title="见证">
+                <i class="fa fa-chevron-left"></i> 见证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.JPG"
+                alt="Juice" />
+            
+              <p class="site-author-name" itemprop="name">Juice</p>
+              <p class="site-description motion-element" itemprop="description">求知若渴 虚心若愚</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/KimJuice" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:iLemonjuice@iCloud.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用户"><span class="nav-number">1.</span> <span class="nav-text">用户</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求本质"><span class="nav-number">1.1.</span> <span class="nav-text">需求本质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是否应该满足所有用户的需求"><span class="nav-number">1.2.</span> <span class="nav-text">是否应该满足所有用户的需求?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想用户之所想"><span class="nav-number">1.3.</span> <span class="nav-text">想用户之所想</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究用户"><span class="nav-number">2.</span> <span class="nav-text">研究用户</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#人物角色-Web-persona"><span class="nav-number">2.1.</span> <span class="nav-text">人物角色(Web-persona)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">2.1.1.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要素"><span class="nav-number">2.1.2.</span> <span class="nav-text">要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人物角色用例-化妆品网络商城"><span class="nav-number">2.1.3.</span> <span class="nav-text">人物角色用例(化妆品网络商城)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类维度"><span class="nav-number">2.1.4.</span> <span class="nav-text">分类维度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#角色创建"><span class="nav-number">2.1.5.</span> <span class="nav-text">角色创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四象限"><span class="nav-number">2.2.</span> <span class="nav-text">四象限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户访谈"><span class="nav-number">2.2.1.</span> <span class="nav-text">用户访谈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调查问卷"><span class="nav-number">2.2.2.</span> <span class="nav-text">调查问卷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可用性测试"><span class="nav-number">2.2.3.</span> <span class="nav-text">可用性测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据分析"><span class="nav-number">2.2.4.</span> <span class="nav-text">数据分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意点"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">注意点:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#商业价值"><span class="nav-number">2.2.4.2.</span> <span class="nav-text">商业价值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求采集"><span class="nav-number">2.2.5.</span> <span class="nav-text">需求采集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析需求"><span class="nav-number">3.</span> <span class="nav-text">分析需求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户需求-VS-产品需求"><span class="nav-number">3.1.</span> <span class="nav-text">用户需求 VS 产品需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满足需求的方式"><span class="nav-number">3.2.</span> <span class="nav-text">满足需求的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创造需求"><span class="nav-number">3.3.</span> <span class="nav-text">创造需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求-DNA"><span class="nav-number">3.4.</span> <span class="nav-text">需求 DNA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转化需求"><span class="nav-number">3.4.1.</span> <span class="nav-text">转化需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#确定基本属性"><span class="nav-number">3.4.2.</span> <span class="nav-text">确定基本属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析商业价值"><span class="nav-number">3.4.3.</span> <span class="nav-text">*分析商业价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初评实现难度"><span class="nav-number">3.4.4.</span> <span class="nav-text">初评实现难度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算性价比"><span class="nav-number">3.4.5.</span> <span class="nav-text">计算性价比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筛选需求"><span class="nav-number">3.5.</span> <span class="nav-text">筛选需求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求打包"><span class="nav-number">3.5.1.</span> <span class="nav-text">需求打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#商业需求文档-BRD"><span class="nav-number">3.5.2.</span> <span class="nav-text">商业需求文档(BRD)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管理需求"><span class="nav-number">3.5.3.</span> <span class="nav-text">管理需求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#附加值"><span class="nav-number">3.5.3.1.</span> <span class="nav-text">附加值</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Juice</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'KimJuice',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'd2d5630d2c2d9647d6c1ee4b90d3fec0fff89f95',
+            
+                client_id: '2a87a8b2417f8200e867'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

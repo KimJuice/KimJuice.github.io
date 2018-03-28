@@ -404,7 +404,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #84c0e1;
   font-size: 14px;
   word-wrap: break-all;
 }
@@ -417,15 +417,15 @@ table>tbody>tr:hover {
 caption,
 th,
 td {
-  padding: 8px;
+  padding: 2px;
   text-align: left;
   vertical-align: middle;
   font-weight: normal;
 }
 th,
 td {
-  border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+  border-bottom: 3px solid #84c0e1;
+  border-right: 1px solid #84c0e1;
 }
 th {
   padding-bottom: 10px;
@@ -913,16 +913,16 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active {
   border-top: 3px solid #fc6423;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #84c0e1;
+  border-right: 1px solid #84c0e1;
   background-color: #fff;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab.active {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #84c0e1;
     border-left: 3px solid #fc6423;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #84c0e1;
+    border-bottom: 1px solid #84c0e1;
   }
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
@@ -933,7 +933,7 @@ pre .javascript .function {
   background-color: #fff;
 }
 .post-body .tabs .tab-content .tab-pane {
-  border: 1px solid #ddd;
+  border: 1px solid #84c0e1;
   padding: 20px 20px 0 20px;
   border-radius: 5px;
 }
@@ -1775,6 +1775,13 @@ pre .javascript .function {
     transform: rotateZ(-30deg);
   }
 }
+.post-copyright {
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ff1700;
+  background-color: #f9f9f9;
+  list-style: none;
+}
 .post-widgets {
   border-top: 1px solid #eee;
   padding-top: 9px;
@@ -2011,7 +2018,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #44facd;
+  background: #91e7c7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2105,7 +2112,6 @@ pre .javascript .function {
 .post-toc .nav-item {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -3043,7 +3049,7 @@ body {
 .content {
   border-radius: 10px;
   margin-top: 0px;
-  background: rgba(255,255,255,0.6) none repeat scroll !important;
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 .posts-expand {
   padding-top: 1%;
