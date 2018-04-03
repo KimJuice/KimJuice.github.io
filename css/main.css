@@ -2018,7 +2018,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7dffcb;
+  background: #cf59b8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3061,7 +3061,7 @@ body {
   margin-top: 20px;
 }
 .main-inner {
-  width: 67%;
+  width: 75%;
 }
 .header {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
